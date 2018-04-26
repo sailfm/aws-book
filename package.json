@@ -1,0 +1,13 @@
+{
+  "name": "deploying-web-apps-with-aws",
+  "description": "Deploying web apps with AWS",
+  "scripts": {
+    "start": "gitbook serve book dist",
+    "build": "gitbook build book dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sufyan Dawoodjee",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
+}
