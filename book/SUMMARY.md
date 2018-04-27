@@ -1,10 +1,10 @@
 # Summary
 
-## Building Web Apps with AWS
+## Building Web Apps with AWS (WORK IN PROGRESS)
 
 * [Introduction](README.md)
 
-## Part 1. Background
+## Chapter 1. Background
 
 * [Intro]()
 * [Web Fundamentals](background/web.md)
@@ -13,7 +13,7 @@
 * [The Cloud](background/cloud.md)
 * [Major Cloud Vendors (2018)]()
 
-## Part 2. AWS Fundamentals
+## Chapter 2. AWS Fundamentals
 
 * [Intro](aws/basics/about.md)
 * [Services]()
@@ -24,16 +24,16 @@
 * [IAM (Identity and Access Management)](aws/basics/IAM.md)
 * [VPC (Virtual Private Clouds)](aws/basics/VPC.md)
 
-## Part 3. AWS Services
+## Chapter 3. AWS Services
 
 * [Compute](aws/services/compute.md)
 * [Storage](aws/services/storage.md)
 * [Other](aws/services/other.md)
 
-## Part 4. Simple Web App: Readability Proxy
+## Chapter 4. Simple Web App: Readability Proxy
 
 * [Intro]()
-* [Provision a VM on EC2](deploy/ec2/deploy.md)
+* [Provision a VM with EC2](deploy/ec2/deploy.md)
 * [Configure network rules]()
 * [Install and run a NodeJS web app](deploy/server/index.md)
 * [Register a custom domain name]()
@@ -41,31 +41,49 @@
 * [Provision a Lets Encrypt SSL Certificate]()
 * [Deploy with NGINX]()
 
-## Part 5. Enhanced Web App: accounts and audio
+## Chapter 5. Enhanced Web App: accounts and audio
 
 * [Intro]()
 * [Source Control with Gitlab](deploy/gitlab.md)
-* [Development with Docker]()
-* [Deploy Postgres on AWS RDS](deploy/rds.md)
-* [Configure Polly](deploy/docker.md)
-* [Configure S3](deploy/docker.md)
+* [Deploy Postgres with RDS](deploy/rds.md)
+* [Generate audio with Polly](deploy/docker.md)
+* [Store files with S3](deploy/docker.md)
 
-## Part 6. Making your web app scalable and reliable
+## Chapter 6. Making your web app scalable and reliable
 
-* [Containerize the app with Docker]()
+* [Containerize with Docker]()
 * [Store the Docker image in ECR]()
 * [Add ELB Elastic Load Balancer]()
 * []()
 
-## Part 7. Manged Deployments with Elastic Beanstalk
+## Chapter 7. Background work: batch audio processing and email notifications
+
+* [Run tasks with SQS]()
+* [Process audio conversion jobs with AWS Batch]()
+* [Send email notifications with SES]()
+
+## Chapter 8. Manged Deployments with Elastic Beanstalk
 
 * [Intro]()
-* [NodeJS with AWS Elastic Beanstalk](deploy/elastic-beanstalk.md)
-* [Email with AWS SES (Simple Email Service)](deploy/ses.md)
-* [Task Queueue with AWS SQS (Simple Queue Service)](deploy/sqs.md)
-* [Redis with AWS Elasticache](deploy/elasticache.md)
+* [NodeJS with Elastic Beanstalk](deploy/elastic-beanstalk.md)
+* [Sending Email with SES](deploy/ses.md)
+* [Task Queueue with SQS](deploy/sqs.md)
+* [Redis with Elasticache](deploy/elasticache.md)
 * [Continuous Integration and Deployment with Gitlab](deploy/gitlab-ci.md)
 
-## Part 8. Infrastructure as Code
+## Chapter 9. Infrastructure Automation
+
+* [Intro]()
+* [Cloudformationa and Terraform]()
+* [Continuous Integration with Gitlab]()
+
+## Chapter 10. Serverless Computing
+
+* [Intro]()
+* [Lambda]()
+* [API Gateway]()
+* [DynamoDB]()
+
+## Chapter 11. Kubernetes
 
 * [Intro]()
