@@ -1,4 +1,4 @@
-# Deploying Web Apps with AWS (WIP)
+# Deploying Web Apps with AWS (Work in Progress)
 
 *Deploying Web Apps with AWS* teaches the fundamentals of deploying web apps with AWS (Amazon Web Services). It couples practical examples with conceptual explanations so that you learn not just how to follow instructions but also what each instruction does and why. Readers will gain expertise using AWS and familiarity with many AWS services by deploying a scalable, reliable and complex web application - a Readability proxy with playlists, RSS, audio playback, and email notifications.
 

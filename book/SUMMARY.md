@@ -1,6 +1,6 @@
 # Summary
 
-## Building Web Apps with AWS (WORK IN PROGRESS)
+## Deploying Web Apps with AWS (WORK IN PROGRESS)
 
 * [Introduction](README.md)
 * [Contents](contents.md)
