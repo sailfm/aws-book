@@ -4,3 +4,4 @@ This chapter explain what the web is and how web servers work. It describes how 
 
 
 
+To most people, the web and the internet are synonmous terms for the service that provides access to email, video, websites, and games on demand.  Providers of web services, however, must make a pedantic distinction.

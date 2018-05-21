@@ -4,11 +4,14 @@
 
 * [Introduction](README.md)
 * [Contents](contents.md)
+* [Reader's Guide](readers-guide.md)
 
 ## Chapter 1. Web Fundamentals
 
 * [Introduction](chapter-1/introduction.md)
-* [Web Protocols](chapter-1/web-protocols.md)
+* [The Internet](chapter-1/the-internet.md)
+* [The World Wide Web](chapter-1/the-world-wide-web.md)
+* [The Domain Name System](chapter-1/the-domain-name-system.md)
 * [Web Security](chapter-1/web-security.md)
 * [Web App Architecture](chapter-1/web-app-architecture.md)
 * [Web Developer Tools](chapter-1/web-developer-tools.md)
@@ -19,6 +22,7 @@
 
 * [Introduction](chapter-2/introduction.md)
 * [Services](chapter-2/services.md)
+* [Account Setup](chapter-2/account-setup.md)
 * [Navigating AWS](chapter-2/why-use-aws.md)
 * [Regions and AZs (Availability Zones)](chapter-2/regions-and-availability-zones.md)
 * [IAM (Identity and Access Management)](chapter-2/identity-and-access-management.md)
@@ -42,6 +46,9 @@
 * [Configure DNS Records](chapter-4/configure-dns-records.md)
 * [Provision a Lets Encrypt SSL Certificate](chapter-4/provision-a-lets-encrypt-ssl-certificate.md)
 * [Deploy with NGINX](chapter-4/deploy-with-nginx.md)
+* [Detour: Deploy with Lightsail](chapter-4/detour-deploy-with-lightsail.md)
+* [Detour: Deploy with Digital Ocean](chapter-4/detour-deploy-with-digital-ocean.md)
+* [Automated Deployment wtih Terraform](chapter-4/automated-deployment-with-terraform.md)
 
 ## Chapter 5. Enhanced Web App: accounts and audio
 
@@ -91,3 +98,8 @@
 ## Chapter 11. Kubernetes
 
 * [Introduction](chapter-11/introduction.md)
+
+## Appendix
+
+* [Number Systems](appendix/number-systems.md)
+* [Computer Storage](appendix/computer-storage.md)
