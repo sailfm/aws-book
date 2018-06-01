@@ -39,8 +39,8 @@
 ## Chapter 4. Simple Web App: Readability Proxy
 
 * [Introduction](chapter-4/introduction.md)
+* [Create a VPC](chapter-4/create-a-vpc.md)
 * [Provision a VM with EC2](chapter-4/provision-a-vm-with-ec2.md)
-* [Configure Network Rules](chapter-4/configure-network-rules.md)
 * [Install and Run a NodeJS Web App](chapter-4/install-and-run-a-nodejs-web-app.md)
 * [Register a Domain Name](chapter-4/register-a-domain-name.md)
 * [Configure DNS Records](chapter-4/configure-dns-records.md)
@@ -61,9 +61,9 @@
 ## Chapter 6. Making your web app scalable and reliable
 
 * [Introduction](chapter-6/introduction.md)
+* [Autoscaling and Load Balancing](chapter-6/autoscaling-and-load-balancing.md)
 * [Containerize with Docker]()
 * [Store the Docker image in ECR]()
-* [Add ELB Elastic Load Balancer]()
 * []()
 
 ## Chapter 7. Background work: batch audio processing and email notifications

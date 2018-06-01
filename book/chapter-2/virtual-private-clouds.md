@@ -1,5 +1,9 @@
 # VPC (Virtual Private Clouds) (WIP)
 
+## Prerequisites
+
+* [The Internet](../chapter-1/the-internet.md)
+
 ## VPC
 
 A virtual private cloud is a private software-defined network connecting AWS resources within a single region. VPCs contain a range of IP addresses defined in [CIDR notation](../chapter-1/web-protocols.md#??Private_Networks).
@@ -43,11 +47,7 @@ Destination   | Target
 
 ## Private Subnets, Public Subnets, and Internet Gateways
 
-
-
 ## NAT Gateways
-
-
 
 ## Security Groups
 
@@ -58,6 +58,16 @@ Destination   | Target
 "network ACLs control inbound and outbound traffic for your subnets"
 
 ## DHCP
+
+## Internal and External IPs and Hostnames
+
+?? Example DNS/IP lookup from within and outside a VPC. Should show diff. Public to private mapping done by NAT.
+
+Public IP addresses only assigned by default in default subnets of default VPC. Otherwise no public IP by default.
+
+## Elastic IPs
+
+## Metadata Interface
 
 ## Conclusion
 

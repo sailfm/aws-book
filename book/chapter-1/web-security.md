@@ -2,10 +2,15 @@
 
 ## Public Key Cryptography
 
+Maybe this should go into appendix
 
 ## SSL
 
-Secure Terminal Sessions
+Secure Socket Layer
+
+## SSH
+
+Secure Shell, public-private key security
 
 ## HTTPS
 
