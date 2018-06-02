@@ -41,11 +41,9 @@
 * [Introduction](chapter-4/introduction.md)
 * [Create a VPC](chapter-4/create-a-vpc.md)
 * [Provision a VM with EC2](chapter-4/provision-a-vm-with-ec2.md)
-* [Install and Run a NodeJS Web App](chapter-4/install-and-run-a-nodejs-web-app.md)
-* [Register a Domain Name](chapter-4/register-a-domain-name.md)
-* [Configure DNS Records](chapter-4/configure-dns-records.md)
+* [Deploy a NodeJS Web App](chapter-4/deploy-a-nodejs-web-app.md)
+* [Add a Domain Name](chapter-4/add-a-domain-name.md)
 * [Provision a Lets Encrypt SSL Certificate](chapter-4/provision-a-lets-encrypt-ssl-certificate.md)
-* [Deploy with NGINX](chapter-4/deploy-with-nginx.md)
 * [Detour: Deploy with Lightsail](chapter-4/detour-deploy-with-lightsail.md)
 * [Detour: Deploy with Digital Ocean](chapter-4/detour-deploy-with-digital-ocean.md)
 * [Automated Deployment wtih Terraform](chapter-4/automated-deployment-with-terraform.md)
@@ -103,3 +101,4 @@
 
 * [Number Systems](appendix/number-systems.md)
 * [Computer Storage](appendix/computer-storage.md)
+* [Terminals](appendix/terminals.md)

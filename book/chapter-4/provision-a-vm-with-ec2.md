@@ -7,6 +7,8 @@
 
 ## Concepts
 
+* If the instance is replaced in the future, it will lose its public IP address. To ensure the webserverelastic IP needed
+
 ## Steps
 
 1. In the AWS Web Console navigate to the EC2 service dashboard and launch and instance.
@@ -27,15 +29,21 @@ SSH   | TCP      | 22   | Anywhere: 0.0.0.0/0
 HTTP  | TCP      | 80   | Anywhere: 0.0.0.0/0
 HTTPS | TCP      | 443  | Anywhere: 0.0.0.0/0
 
-7. Create a new key pair named `aws`. Download the private key file `aws.pem` and copy it to `~/.ssh/aws.pem`.
+7. Create a new key pair named `aws`. Download the private key file `aws.pem` and copy it to `~/.ssh/aws.pem`. Ensure only you can read the private key with the command `chmod 400 ~/.ssh/aws.pem`.
 
-8. Finally, launch the instance then navigate to the EC2 dashboard. Take note of the instance's public and private IPs an DNS Hostnames.
+8. Finally, launch the instance then navigate to the EC2 dashboard. Take note of the instance's public and private IPs and DNS Hostnames.
 
 ·          | Hostname                                  | IP
 -----------|-------------------------------------------|--------------
 **Public** | ec2-54-227-175-11.compute-1.amazonaws.com | 54.227.175.11
 **Private**| ip-10-0-0-127.ec2.internal                | 10.0.0.127
 
+9. Navigate to the VPC dashboard, allocate a new Elastic IP, then associate the IP with the `readproxy-v1` instance. The public hostname and IP will change correspondingly.
+
+·          | Hostname                                   | IP
+-----------|--------------------------------------------|--------------
+**Public** | ec2-52-201-208-126.compute-1.amazonaws.com | 52.201.208.126
+**Private**| ip-10-0-0-127.ec2.internal                 | 10.0.0.127
 
 ## References
 
