@@ -48,7 +48,12 @@
 * [Detour: Deploy with Digital Ocean](chapter-4/detour-deploy-with-digital-ocean.md)
 * [Automated Deployment wtih Terraform](chapter-4/automated-deployment-with-terraform.md)
 
-## Chapter 5. Enhanced Web App: accounts and audio
+## Chapter 5. Splitting the Web and API Tier
+
+* [Introduction]()
+* []
+
+## Chapter 5.2. Enhanced Web App: accounts and audio
 
 * [Introduction](chapter-5/introduction.md)
 * [Source Control with Gitlab](deploy/gitlab.md)

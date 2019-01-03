@@ -24,7 +24,7 @@ If you registered your domain name with another registrar, you have to manually 
 
 1. From the Route 53 dashboard create a new Hosted Zone for your Domain Name (`novelcat.com` in my case).
 
-2. Select the hosted zone you created and take note of the 4 nameservers listed. For me, these are:
+2. Select the Hosted Zone you created and take note of the 4 nameservers listed. For me, these are:
 
   ```
   ns-715.awsdns-25.net
@@ -33,7 +33,7 @@ If you registered your domain name with another registrar, you have to manually 
   ns-119.awsdns-14.com
   ```
 
-3. View the Hozed Zone's Record Sets, particularly the record of type SOA.
+3. View the Hosted Zone's Record Set, particularly the record of type SOA.
 
 4. Log into your registrar's dashboard and search for an option to configure your domain's nameservers. Enter your Hosted Zone's four nameservers in order. Save.
 
@@ -41,23 +41,49 @@ If you registered your domain name with another registrar, you have to manually 
 
 ## Configure DNS Records
 
+Now we create two DNS records. The first is an A record that maps your domain name to your server's IP address. The second is a CNAME that states the www subdomain is resolved by looking up the root domain name.
 
+1. From the Route 53 dashboard navigate to the Record Set for your domain's Hosted Zone.
 
-## Alternative Domain Name Registrars
+2. Create a new record set. Set **Name** to `<YOUR_DOMAIN>` by leaving the input field empty, set **Type** to *A*, set **Value** to your instance's IP address, and leave **TTL** alone. My record is below:
 
-* [Namecheap](https://www.namecheap.com/)
-* [Gandi.net](https://www.gandi.net/)
-* [Google Domains](https://domains.google/)
+Name              | Type  | Value          | TTL
+------------------|-------|----------------|----
+novelcat.com.     | A     | 52.201.208.126 | 300
 
-## Alternative DNS Management Providers
+3. Create a new record set. Set **Name** to `www.<YOUR_DOMAIN>` by by setting the input field to `www`, set **Type** to *CNAME*, set **Value** to `<YOUR_DOMAIN>`, and leave **TTL** alone.   My record is below:
 
-* [Cloudflare](https://www.cloudflare.com/)
-* [Digital Ocean](https://www.digitalocean.com/)
-* [Netlify](https://www.netlify.com/)
-* [Google Cloud DNS](https://cloud.google.com/dns/docs/)
-* Your domain registrar
+Name              | Type  | Value          | TTL
+------------------|-------|----------------|----
+www.novelcat.com. | CNAME | novelcat.com   | 300
+
+4. Your web app should now be accessible at your domain name. Confirm this by navigating to the domain in your web browser. If not, wait a while for DNS changes to propagate through the internet. You can now SSH into your instance using your domain name. For example, I run `ssh -i ~/.ssh/aws.pem ubuntu@novelcat.com`.
+
+## Redirect the www subdomain
+
+Currently, your website is accessible through both the root domain and the www subdomain. To establish a single canonical source of content, redirect traffic targeting the www subdomain to the root domain.
+
+1. Permanently redirect requests targeting `www.<YOUR_DOMAIN>` to `<YOUR_DOMAIN>` by replacing the content of `/etc/nginx/sites-enabled/default` with the following:
+
+  ```
+  server {
+      listen 80;
+      server_name <YOUR_DOMAIN>;
+      location / {
+        proxy_pass        http://127.0.0.1:3000;
+        proxy_set_header  Host       $http_host;
+        proxy_set_header  X-Real-IP  $remote_addr;
+      }
+    }
+  server {
+      server_name www.<YOUR_DOMAIN>;
+      return 301 $scheme://<YOUR_DOMAIN>$request_uri;
+  }
+  ```
+
+2. Restart ngingx with `sudo systemctl reload nginx`. From your web browser, navigate to `www.<YOUR_DOMAIN>` and confirm that you are redirected to `<YOUR_DOMAIN>`.
 
 ## References
 
 1. https://www.digitalocean.com/community/tutorials/an-introduction-to-digitalocean-dns
-2. 
+2. https://www.digitalocean.com/community/tutorials/how-to-redirect-www-to-non-www-with-nginx-on-centos-7

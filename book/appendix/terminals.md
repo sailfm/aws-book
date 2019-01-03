@@ -19,12 +19,15 @@ A programmer's utimate tool, once you learn to use it. Until then, it's arcane.
 * ls
 * pwd
 * cd
+* rm
+* touch
+* cp
 * echo
 * cat
 * quit and exit
-* touch
 * nano
 * man
+* ln
 * -h and --help
 * su and sudo
 
@@ -39,38 +42,51 @@ A programmer's utimate tool, once you learn to use it. Until then, it's arcane.
 
 ## Developer Commands
 
-* screen
+* screen, tmux
 * ssh
 * git
 * curl and wget
 * yum, apt, brew
+* less
 * vi and vim
+* tar
 
 ## Advanced Commands
 
+* eval
 * ip, inconfig, netstat
 * dig, whois
 * service
 * chkconfig, systemctl
+* ps, nohup
+* ssh-keygen
 
 ## Background Processes
 
 * ps
 * &
 
+## Processes
+
+* child/parent/fork processes, daemons, system initialization, chron
+
+## interactive/noninteractive shells
+
 ## Environment Variables
 
-* printenv
 * $0, $1.
 * set
-* env
+* env - printenv / run commands
+* printenv
 * source
+* export
 
 ## Directories
 
 * ~
 * /
 * .
+* -
 * ..
 * /etc ...
 
